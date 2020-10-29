@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <style type="text/css">   
+        .line{
+            width: 100%;
+            border-bottom: 3px solid #eeeeee;
+            padding-right: 10px;
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            }
+        </style>
+  </head>
+  <body>
+
+    <div class="card" style="width: 180px; height: 30px; margin: 10px;">
+        <div class="card-body" style="position: relative; top: -17px;">
+            <a href="#" id="aHighScores" class="card-link">View High Scores</a>
+        </div>
+      </div>
+        <div class="card" style="position:absolute;top:0;right:0;width: 125px; height: 30px; margin: 10px;">
+        <div class="card-body" style="position: relative; top: -17px;">
+          Timer: <span id="spnTimer">0</span>
+        </div>
+      </div>
+    <div class="jumbotron" style="padding: 20px; margin: 20px;  height:auto; " id="divMain">
+      <span id="spnScore" style="margin-top: -10px; width: 200px; position: absolute; left: 40px"></span>
+      <span id="spnQuestion" style="margin-top: -10px; width: 200px; position: absolute; right: -30px"></span>
+      <h1 class="display-4" style="text-align: center;">Quiz</h1>
+      
+        <div class="card" style="padding: 20px;">
+            <div class="card-body" style="height: 150px;" id="divEnter">
+                <p>This is a quiz. There are a total of 40 questions. You can pick 1-40 questions to start and each question gets 10 seconds. For every incorrect answer 5 seconds is subtracted from the timer. Your final score is number of questions you get correct. </p>
+                <div class="col-auto" style="width: 200px;">
+                <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">Questions</div>
+                </div>
+                <input type="number" class="form-control" value="10" min="1" max="40" id="txtQuestions"  />
+              </div>
+              </div>
+                <button type="button" class="btn btn-danger" style="position: absolute; left: 48%;" id="btnEnter">Enter Quiz</button>  
+            </div>
+            <div class="alert alert-primary" id="divQuestion" style="display: none;">Which vegetable gives Popeye his strength?</div>
+            <div class="alert alert-secondary" id="divAnswerA" answer-choice="A" style="display: none;">Broccoli</div>
+            <div class="alert alert-secondary" id="divAnswerB" answer-choice="B" style="display: none;">Spinach</div>
+            <div class="alert alert-secondary" id="divAnswerC" answer-choice="C" style="display: none;">Asparagus</div>
+            <div class="alert alert-secondary" id="divAnswerD" answer-choice="D" style="display: none;">Lentils</div>
+            <div class="card-body" style="height: 150px; display: none; " id="divResults">
+              <p>Congratulations! Your score is <span id="spnTotalScore"></span>. Enter Initials to save your score.  </p>
+                <div class="col-auto" style="width: 300px;">
+                <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">Initials</div>
+                </div>
+                <input type="text" class="form-control" id="txtInitials" placeholder="Initials"  />
+              </div>
+              </div>
+              <button type="button" class="btn btn-primary" style="position: absolute; left: 30%;" id="btnBack">Restart</button>  
+                <button type="button" class="btn btn-primary" style="position: absolute; left: 65%;" id="btnSave">Save</button>  
+            </div>
+        </div>
+    </div>
+    <div class="card-body" style="height: 150px; display: none; " id="divHighScores">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Initials</th>
+            <th scope="col">High Scores</th>
+          </tr>
+        </thead>
+        <tbody id="tBodyHighScores">
+          
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-primary" style="position: absolute; left: 48%;" id="btnRefresh">Go Back</button>  
+    </div>
+    <div class="alert alert-success" id="divMessage" style="display: none; margin-left: 10px; margin-right: 10px;"></div>
+    <script src="Assets/scripts/Quiz.js"></script>
+  </body>
+</html>

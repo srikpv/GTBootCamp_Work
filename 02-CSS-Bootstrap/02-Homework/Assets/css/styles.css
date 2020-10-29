@@ -1,0 +1,39 @@
+
+  @media screen and (min-width: 400px) { 
+    div.container-sm {
+        width: 380px;
+    }
+
+    body {
+        background-color: antiquewhite;
+    }
+  }
+
+  @media screen and (min-width: 576px) { 
+      div.container-sm {
+          width: 550px;
+      }
+      body {
+        background-color: aqua;
+    }
+  }
+
+  @media screen and (min-width: 768px) { 
+    div.container-sm {
+        width: 750px;
+    }
+    body {
+        background-color: gray;
+    }
+}
+
+@media screen and (min-width: 992px) { 
+    div.container-sm {
+        width: 970px;
+    }
+    body {
+        background-color: gold;
+    }
+}
+  
+  
