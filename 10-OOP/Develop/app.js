@@ -23,7 +23,6 @@ let getAllValues = (object) => {
 }
 
 let getEmployee = (type, param1, param2, param3, param4) => {
-    //console.log(type,  param1, param2, param3, param4);
     switch(type){
         case "Engineer" : return (new Engineer(param1, param2, param3, param4)); break;
         case "Intern" : return (new Intern(param1, param2, param3, param4)); break;
@@ -56,30 +55,25 @@ let askChoice = async _ => {
 
 let buildEmployee = async (type) => {
     let employee = getEmployee(type);
-    const answers = await inquirer.prompt(getPrompt(employee));
-    return answers;
-}
-let addEmployee = async (choice) => {
-    employee_answers = await buildEmployee(choice);
-    employee = await getEmployee(choice, ...(getAllValues(employee_answers)));
-    employees.push(employee);
+    let answers = await inquirer.prompt(getPrompt(employee));
+    let employee_obj = await getEmployee(type, ...(getAllValues(answers)));
+    return employee_obj;
 }
 
-let buildTeam = async _ =>{
-
-    let employee_answers = await buildEmployee("Manager");
-    let employee = await getEmployee("Manager", ...(getAllValues(employee_answers)));
-    employees.push(employee);
+let buildTeam = async _ => {
+    let manager = await buildEmployee("Manager");
+    employees.push(manager);
     let choices = await askChoice();
     let [choice] = await getAllValues(choices);
     while(choice != "No more employees"){
-        await addEmployee(choice);
+        let employee = await buildEmployee(choice);
+        await employees.push(employee);
         choices = await askChoice();
         [choice] = await getAllValues(choices);
     }
 }
 
-let buildHTML = async _ =>{
+let buildHTML = async _ => {
     await buildTeam();
     let HTML = await render(employees);
     fs.writeFile(outputPath, HTML, err => {
