@@ -17,7 +17,7 @@ This app lets you manage your notes thru a json file
 
 ## Installation
 
-Heroku link (no need to install any thing)
+[Heroku link](https://polar-island-97564.herokuapp.com/) (no need to install any thing)
 
 
 ## Usage
