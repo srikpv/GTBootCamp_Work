@@ -31,9 +31,9 @@ Run the tests
 
 ## Licenses
 
-[https://img.shields.io/twitter/url?style=flat-square&url=https%3A%2F%2Ftwitter.com%2Fsrikpv](https://img.shields.io/twitter/url?style=flat-square&url=https%3A%2F%2Ftwitter.com%2Fsrikpv)
-[https://img.shields.io/github/followers/srikpv?style=social](https://img.shields.io/github/followers/srikpv?style=social)
-[https://img.shields.io/requires/github/srikpv/GTBootCamp_Work](https://img.shields.io/requires/github/srikpv/GTBootCamp_Work)
+![Twitter](https://img.shields.io/twitter/url?style=flat-square&url=https%3A%2F%2Ftwitter.com%2Fsrikpv)
+![Github](https://img.shields.io/github/followers/srikpv?style=social)
+![Requirements](https://img.shields.io/requires/github/srikpv/GTBootCamp_Work)
 
 ## Questions
 
