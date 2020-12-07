@@ -34,10 +34,10 @@ const titles_iterator = titles.keys();
 // Questions -----Github username, email address, 
 
 let printTitle = (text) => `# ${text}\n`;
-let printSubTitle = (text) => `## ${text}\n`;
+let printSubTitle = (text) => `\n## ${text}\n`;
 let printText = (text) => `${text}\n`;
 let printListItem = (text) => `* [${text}](#${text.toLowerCase()})`;
-let printImage = (text) => `[${text}](${text})`;
+let printImage = (head, text) => `![${head}](${text})`;
 
 inquirer
   .prompt([
@@ -141,7 +141,7 @@ inquirer
             case "licenses": 
                 file_contents.push(printSubTitle(titles.get(node)));
                 for(let license of readme[node])
-                    file_contents.push(printImage(licenses.get(license)));
+                    file_contents.push(printImage(license, licenses.get(license)));
                 break;
             case "test_instructions": 
                 file_contents.push(printSubTitle(titles.get(node)));
