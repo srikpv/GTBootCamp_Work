@@ -1,8 +1,10 @@
 # Readme Generator
 
+
 ## Description
 
 This application generates Readme Markdown file based upon your inputs
+
 
 ## Table of Contents
 
@@ -17,22 +19,26 @@ This application generates Readme Markdown file based upon your inputs
 
 Clone the Repo from Github and run npm i
 
+
 ## Usage
 
 Type "node index.js" to run the project
+
 
 ## Contributing
 
 Please fork the project and contribute your changes
 
+
 ## Tests
 
-Run the tests
+No tests yet
+
 
 ## Licenses
 
 ![Twitter](https://img.shields.io/twitter/url?style=flat-square&url=https%3A%2F%2Ftwitter.com%2Fsrikpv)
-![Github](https://img.shields.io/github/followers/srikpv?style=social)
+![GitHub](https://img.shields.io/github/followers/srikpv?style=social)
 ![Requirements](https://img.shields.io/requires/github/srikpv/GTBootCamp_Work)
 
 ## Questions
