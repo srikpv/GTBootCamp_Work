@@ -1,9 +1,9 @@
-# Readme Generator
+# Note Taking App with Express
 
 
 ## Description
 
-This application generates Readme Markdown file based upon your inputs
+This app lets you manage your notes thru a json file
 
 
 ## Table of Contents
@@ -17,29 +17,26 @@ This application generates Readme Markdown file based upon your inputs
 
 ## Installation
 
-Clone the Repo from Github and run npm i
+Heroku link (no need to install any thing)
 
 
 ## Usage
 
-Type "node index.js" to run the project
+Navigate to the above link
 
 
 ## Contributing
 
-Please fork the project and contribute your changes
+Please fork the folder and contribute
 
 
 ## Tests
 
-No tests yet
+Test methods not included currently
 
 
 ## Licenses
 
-![Twitter](https://img.shields.io/twitter/url?style=flat-square&url=https%3A%2F%2Ftwitter.com%2Fsrikpv)
-![GitHub](https://img.shields.io/github/followers/srikpv?style=social)
-![Requirements](https://img.shields.io/requires/github/srikpv/GTBootCamp_Work)
 
 ## Questions
 
